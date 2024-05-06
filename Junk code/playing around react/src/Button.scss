@@ -1,0 +1,27 @@
+@import './global.scss';
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $size-xs;
+    button{
+        margin-top: $size-s;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding: $size-xs;
+        color: $color-dark;
+        font-size: $size-xs;
+        transition: 0.5s ease;
+        outline: 1px solid $color-dark;
+        border: none;
+        cursor: pointer;
+        
+    
+        &:hover{
+            background-color: $color-brand;
+            outline: none;
+        }
+      }
+}

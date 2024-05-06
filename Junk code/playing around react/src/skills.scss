@@ -1,0 +1,152 @@
+@import './global.scss';
+
+.main{
+    width: 90%;
+    margin: 0 auto;
+    .image__icon__main{
+        position: relative;
+        margin-top: $size-xl;
+        display: flex;
+        justify-content: center;
+        gap: calc($size-s + 10px);
+        align-items: end;
+        .background{
+            position: relative;
+            width: 300px;
+            height: 260px;
+            border-radius: 100% 100% 0 0;
+            .image{
+                bottom: 0px;
+                position: absolute;
+                min-width: 300px;
+                height: 300px;
+                border-radius: 150px 150px 0px 0px;
+                background-repeat: no-repeat;
+                background-size: 300px;
+                background-position: bottom;
+                transition: 0.5s ease;
+            }
+        }
+        .iconsDiv{
+            position: relative;
+            .line__top, .line__bottom{
+                width: 2px;
+                height: 40px;
+                background-color: $color-light;
+                margin: 0 auto;
+            }
+            .line__top::before{
+                content: "";
+                position: absolute;
+                display: block;
+                width: 8px;
+                height: 8px;
+                background-color: $color-light;
+                margin: 0 auto;
+                border-radius: 100%;
+                left: 50%;
+                transform: translate(-50%);
+            }
+            .line__bottom::before{
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 8px;
+                    height: 8px;
+                    background-color: $color-light;
+                    margin: 0 auto;
+                    border-radius: 100%;
+                    left: 50%;
+                    transform: translate(-50%);
+                    bottom: 0;
+            }
+        .icons{
+            width: 26px;
+            height: 26px;
+            background-size: cover;
+            background-position: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        #illustrator{
+            background-image: url('./assets/icons/icons_illustrator.png');
+        }
+        #illustrator:hover{
+            background-image: url('./assets/icons/icons_illustratorHover.png');
+        }
+        #photoshop{
+            background-image: url('./assets/icons/icons_photoshop.png');
+        }
+        #photoshop:hover{
+            background-image: url('./assets/icons/icons_photoshopHover.png');
+        }
+        #figma{
+            background-image: url('./assets/icons/icons_figma.png');
+        }
+        #figma:hover{
+            background-image: url('./assets/icons/icons_figmaHover.png');
+        }
+        #dallE{
+            background-image: url('./assets/icons/icons_dall-e.png');
+        }
+        #dallE:hover{
+            background-image: url('./assets/icons/icons_dall-eHover.png');
+        }
+        #midjourney{
+            background-image: url('./assets/icons/icons_midjourney.png');
+        }
+        #midjourney:hover{
+            background-image: url('./assets/icons/icons_midjourneyHover.png');
+        }
+        #html{
+            background-image: url('./assets/icons/icons_html.png');
+        }
+        #html:hover{
+            background-image: url('./assets/icons/icons_htmlHover.png');
+        }
+        #css{
+            background-image: url('./assets/icons/icons_css.png');
+        }
+        #css:hover{
+            background-image: url('./assets/icons/icons_cssHover.png');
+        }
+        #javascript{
+            background-image: url('./assets/icons/icons_javascript.png');
+        }
+        #javascript:hover{
+            background-image: url('./assets/icons/icons_javascriptHover.png');
+        }
+        #react{
+            background-image: url('./assets/icons/icons_react.png');
+        }
+        #react:hover{
+            background-image: url('./assets/icons/icons_reactHover.png');
+        }
+        #python{
+            background-image: url('./assets/icons/icons_python.png');
+        }
+        #python:hover{
+            background-image: url('./assets/icons/icons_pythonHover.png');
+        }
+        }
+    }
+    
+    .text{
+        transition: 0.5s;
+        text-align: center;
+        margin-top: $size-s;
+    }
+    .load__more{
+        text-decoration: underline;
+        margin-top: 30px;
+        text-align: center;
+        cursor: pointer;
+        font-weight: 600;
+        transition: 0.3s ease;
+    }
+    .load__more:hover{
+        color: blue;
+    }
+}

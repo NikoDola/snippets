@@ -1,0 +1,118 @@
+
+$size-xs: 1rem;
+$size-s: 1.6rem;
+$size-m: 2.5rem;
+$size-l: 4rem;
+$size-xl: 6.5rem;
+
+$size-xxl: 10rem;
+
+$color-brand: #87D0D3;
+
+$color-dark: #5B5F5F;
+$color-medium: #EDEDED;
+$color-light: #C5C6C4;
+$color-extra-light: #C5C6C4;
+
+
+
+body{
+    font-family: -apple-system, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    color: $color-dark;
+    background-color: $color-medium;
+    ::selection{
+        background-color: $color-brand;
+    }
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  button{
+    margin-top: $size-s;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: $size-xs;
+    color: $color-dark;
+    font-size: $size-xs;
+    transition: 0.5s ease;
+    outline: 1px solid $color-dark;
+    border: none;
+    cursor: pointer;
+    
+
+    &:hover{
+        
+        background-color: $color-brand;
+        outline: none;
+    }
+  }
+
+  h1{
+    font-size: $size-l;
+    margin: 0;
+    padding: 0;
+    
+  }
+  h2{
+    font-size: $size-m;
+    margin: 0;
+    padding: 0;
+  }
+  h3{
+    font-size: $size-s;
+    margin: 0;
+    padding: 0;
+  }
+
+  h4{
+    font-size: $size-xs;
+    margin: 0;
+    padding: 0;
+  }
+
+  h5{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system-body, sans-serif;
+    font-size: $size-xs;
+    padding: 0;
+    margin: 0;
+  }
+ 
+
+  @media (max-width: 780px){
+    h1{
+      font-size: $size-l * 0.7;   
+    }
+    h2{
+      font-size: $size-m * 0.7;
+
+    }
+    h3{
+      font-size: $size-s * 0.7;
+      margin: 0;
+      padding: 0;
+    }
+  
+    h4{
+      font-size: $size-xs * 0.7;
+      margin: 0;
+      padding: 0;
+    }
+  
+    h5{
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system-body, sans-serif;
+      font-size: $size-xs * 0.7;
+      padding: 0;
+      margin: 0;
+    }
+
+  }

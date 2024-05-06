@@ -1,0 +1,13 @@
+@import './global.scss';
+
+.heading{
+    margin-top: $size-l;
+    .heading{
+        margin: 0 auto;
+        text-align: center;
+    }
+    .subheading{
+        text-align: center;
+        margin: 0 auto;
+    }
+}
