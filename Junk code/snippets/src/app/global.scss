@@ -1,0 +1,122 @@
+
+// Variables
+
+$mediumDark: #161616;
+$darkColor: #1f1f1f;
+$extraDarkColor: #000000;
+$mediumColor: #868586;
+$lightColor: #d7d7d7;
+$pinkColor: #c486ba;
+$blueDarkColor: #4176AB;
+$blueLightColor: #9EDBEF;
+$yellowColor: #DCDC98;
+$greenColor: #2d9b94;
+$orangeColor: #DF4148;
+$orangeLightColor: #c10e3e;
+
+$desktop-with: 60%;
+$phone-with: 80%;
+
+
+* {
+    color: $mediumColor;
+    font-family: 'Roboto';
+    box-sizing: border-box;
+}
+
+h1{
+    color: $lightColor;
+    transition: 0.5s;
+}
+
+h1::selection{
+    background-color: $greenColor;
+}
+
+h1:hover{
+    color: white;
+}
+
+body{
+    background-color: $darkColor;
+}
+
+.main{
+    position: relative;
+    width: 58%;
+    margin: 0 auto;
+    gap: 2rem;
+
+}
+
+label{
+    margin-bottom: 15px;
+}
+
+label::selection{
+    background-color: $orangeColor;
+    color: rgb(0, 0, 0);
+}
+
+
+
+form  * {
+    display: block;
+    width: $desktop-with;
+    margin-top: 20px;
+    
+}
+textarea, input{
+    width: $desktop-with;
+    background-color: $mediumDark;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+
+textarea:focus, input:focus{
+    color: rgb(200, 200, 200);
+    outline: none;
+    background-color: black;
+}
+
+textarea{
+    height: 80px;
+}
+
+input{
+    width: 100%;
+
+}
+
+button{
+    background-color: $orangeColor;
+    color: $darkColor;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 30%;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 0;
+    transition: letter-spacing ease 0.3s, background-color 0.3s
+}
+
+button:hover{
+    background-color: $orangeLightColor;
+    letter-spacing: 3px;
+}
+@media only screen and (max-width: 767px){
+    .main{
+        flex-direction: column;
+        width: 90%;
+    }
+}
+
