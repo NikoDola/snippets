@@ -29,11 +29,11 @@ export default function SnippetEditForm({ snippet }: SnippetEditFormProps ) {
             onChange={handleEditorChange}
             />
             <div className='main2'>
-            <form action={() => actions.editSnippet(snippet.id, code)}>
+            {/* <form action={() => actions.editSnippet(snippet.id, code)}>
                 <button type='submit'>Save</button>
-            </form>
-            
-                <button onClick={()=> actions.deleteSnippet(snippet.id)}>Delete</button>
+            </form> */}
+            <button onClick={()=>{actions.editSnippet(snippet.id, code)}}> Update</button>
+            <button onClick={()=> actions.deleteSnippet(snippet.id)}>Delete</button>
           
             </div>
         </div>

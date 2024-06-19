@@ -3,13 +3,9 @@
 
 $mediumDark: #161616;
 $darkColor: #1f1f1f;
-$extraDarkColor: #000000;
+
 $mediumColor: #868586;
 $lightColor: #d7d7d7;
-$pinkColor: #c486ba;
-$blueDarkColor: #4176AB;
-$blueLightColor: #9EDBEF;
-$yellowColor: #DCDC98;
 $greenColor: #2d9b94;
 $orangeColor: #DF4148;
 $orangeLightColor: #c10e3e;
@@ -43,11 +39,37 @@ body{
 
 .main{
     position: relative;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
     width: 58%;
+    height: max-content;
     margin: 0 auto;
     gap: 2rem;
-
+    box-sizing: border-box;
+    background-color: $mediumDark;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    padding-left: 15px;
+    border-radius: 15px;
+    .snippetButton{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 20%;
+        cursor: pointer;
+        border-radius: 15px;
+        background-color: $orangeColor;
+        color: $lightColor;
+        border: none;
+    }
+    .snippetText{
+        width: 78%;
+    }
 }
+
+
 
 label{
     margin-bottom: 15px;
@@ -92,30 +114,10 @@ input{
 
 }
 
-button{
-    background-color: $orangeColor;
-    color: $darkColor;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 1rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    width: 30%;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    position: absolute;
-    right: 0;
-    transition: letter-spacing ease 0.3s, background-color 0.3s
-}
 
-button:hover{
-    background-color: $orangeLightColor;
-    letter-spacing: 3px;
-}
 @media only screen and (max-width: 767px){
     .main{
-        flex-direction: column;
+       
         width: 90%;
     }
 }
