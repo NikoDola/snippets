@@ -1,6 +1,7 @@
 
 import { db } from '@/db'
 import { notFound } from 'next/navigation'
+import SnippetEditForm from '@/components/SnippetEditForm'
 
 interface TypeCheck{
     params:{
@@ -23,8 +24,7 @@ export default async function Pages(props: TypeCheck) {
     }
     return(
         <>
-        <h4>{snippet.title}</h4>
-        <p>{snippet.code}</p>
+    <SnippetEditForm snippet={snippet}/>
         <div  style={{display: 'flex'}}>
             <button>Edit Snippet</button>
             <button>Delete</button>

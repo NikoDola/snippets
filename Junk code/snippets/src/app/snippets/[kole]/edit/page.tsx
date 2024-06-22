@@ -1,6 +1,6 @@
 import { db } from '@/db/index'
 import { notFound } from 'next/navigation'
-import SnippetEditForm from '@/components/SnippetEditForm.tsx'
+import SnippetEditForm from '@/components/SnippetEditForm'
 
 interface SnippetEditPageProps{
     params:{

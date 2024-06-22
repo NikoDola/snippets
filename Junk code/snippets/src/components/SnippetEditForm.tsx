@@ -24,14 +24,13 @@ export default function SnippetEditForm({ snippet }: SnippetEditFormProps ) {
             <Editor 
             height= "40vh"
             theme="vs-dark"
-            language="javascript"
+            language={snippet.language}
             defaultValue={snippet.code}
             onChange={handleEditorChange}
             />
             <div className='main2'>
-            {/* <form action={() => actions.editSnippet(snippet.id, code)}>
-                <button type='submit'>Save</button>
-            </form> */}
+
+            <h4>{snippet.title}</h4>
             <button onClick={()=>{actions.editSnippet(snippet.id, code)}}> Update</button>
             <button onClick={()=> actions.deleteSnippet(snippet.id)}>Delete</button>
           

@@ -57,7 +57,7 @@ body{
         top: 0;
         right: 0;
         height: 100%;
-        width: 20%;
+        width: 15%;
         cursor: pointer;
         border-radius: 15px;
         background-color: $orangeColor;
@@ -80,12 +80,15 @@ label::selection{
     color: rgb(0, 0, 0);
 }
 
+select{
+    height: auto;  /* Resets any previously defined height */
+    max-height: 2.5em; /* Limit height to a single line */
+    overflow: hidden; /* Prevent showing all options */
+}
 
-
-form  * {
-    display: block;
-    width: $desktop-with;
-    margin-top: 20px;
+form   {
+    display: flex;
+    flex-direction: column;
     
 }
 textarea, input{
@@ -112,6 +115,16 @@ textarea{
 input{
     width: 100%;
 
+}
+
+select{
+    background-color: $darkColor;
+    width: $desktop-with;
+    margin: 0 auto;
+    margin-top: 30px;
+    option{
+        color: white;
+    }
 }
 
 
