@@ -13,7 +13,6 @@
     "@prisma/client": "^5.15.0",
     "lottie": "^0.0.1",
     "lottie-react": "^2.4.0",
-    "lottie-react-web": "^2.2.2",
     "next": "14.2.4",
     "prisma": "^5.15.0",
     "react": "^18",
