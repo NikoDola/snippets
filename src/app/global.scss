@@ -1,0 +1,155 @@
+
+// Variables
+
+$mediumDark: #161616;
+$darkColor: #1f1f1f;
+
+$mediumColor: #868586;
+$lightColor: #d7d7d7;
+$greenColor: #2d9b94;
+$orangeColor: #DF4148;
+$orangeLightColor: #c10e3e;
+
+$desktop-with: 60%;
+$phone-with: 80%;
+
+
+* {
+    color: $mediumColor;
+    font-family: 'Roboto';
+    box-sizing: border-box;
+}
+
+h1{
+    color: $lightColor;
+    transition: 0.5s;
+}
+
+h1::selection{
+    background-color: $greenColor;
+}
+
+h1:hover{
+    color: white;
+}
+
+body{
+    background-color: $darkColor;
+}
+
+.main{
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 60%;
+    height: max-content;
+    margin: 0 auto;
+    gap: 2rem;
+    box-sizing: border-box;
+    background-color: $mediumDark;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    padding-left: 15px;
+    border-radius: 15px;
+    .snippetButton{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        cursor: pointer;
+        border-radius: 15px;
+        background-color: $orangeColor;
+        color: $lightColor;
+        border: none;
+    }
+    .snippetText{
+        width: 78%;
+    }
+}
+
+
+
+label{
+    margin-bottom: 15px;
+}
+
+label::selection{
+    background-color: $orangeColor;
+    color: rgb(0, 0, 0);
+}
+
+select{
+    height: auto;  /* Resets any previously defined height */
+    max-height: 2.5em; /* Limit height to a single line */
+    overflow: hidden; /* Prevent showing all options */
+}
+
+form   {
+    display: flex;
+    flex-direction: column;
+    
+}
+textarea, input{
+    background-color: $mediumDark;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 60%;
+    border: none;
+    padding: 10px;
+    outline: none;
+    margin: 0 auto;
+}
+
+textarea:focus, input:focus{
+    color: rgb(200, 200, 200);
+    outline: none;
+    background-color: black;
+
+}
+
+textarea{
+    height: 80px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+input{
+    width: 100%;
+    width: 60%;
+    margin: 0 auto;
+
+}
+
+select{
+    background-color: $darkColor;
+    width: $desktop-with;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 5px;
+    outline: none;
+    border: none;
+    background-color: black;
+    
+    option{
+        color: white;
+    }
+}
+
+select option:checked {
+    appearance: none;
+    color: red;
+    background-color: rgb(28, 28, 118);
+  }
+
+
+@media only screen and (max-width: 767px){
+    .main{
+        width: 90%;
+    }
+    .selector{
+        width: 90%;
+    }
+}
+
+

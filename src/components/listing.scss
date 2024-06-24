@@ -1,0 +1,65 @@
+
+.image{
+    width: 25px;
+}
+.searchParrent{
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    background-color: red;
+    width: 60%;
+    margin-top: 50px;
+    margin-bottom: -20px;
+    .searchIcon{
+        position: absolute;
+        width: 15px;
+        left: 2%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5;
+    }
+    .searchBar{
+        padding-left: 7%;
+        position: relative;
+        width: 100%;
+    }
+}
+
+
+.main{
+    
+    .title{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        width: 50%;
+    }
+    .snippetButton{
+        width: 15%;
+    }
+}
+
+.title__icons{
+    display: flex;
+}
+
+.mainForm{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 50px;
+
+}
+
+
+
+@media only screen and (max-width: 767px){
+    .searchParrent{
+        width: 95%;
+    }
+}
