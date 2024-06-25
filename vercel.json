@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "package.json",
+        "use": "@vercel/next"
+      }
+    ],
+    "functions": {
+      "api/*.js": {
+        "includeFiles": "file:./dev.db"
+      }
+    }
+  }
+  
