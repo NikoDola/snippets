@@ -7,7 +7,7 @@
     ],
     "functions": {
       "api/*.js": {
-        "includeFiles": "file:./dev.db"
+        "includeFiles": "prisma/dev.db"
       }
     }
   }
