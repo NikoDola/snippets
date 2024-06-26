@@ -1,0 +1,18 @@
+.phone{
+    position: absolute;
+    height: 350px;
+    width: 170px;
+    background: gray;
+    z-index: 100;
+    margin-left: auto;
+    top: 50%;
+    left: 60%;
+    border-radius: 20px;
+   
+}
+
+.a4{
+    width: 594px;
+    height: 842px;
+    background-color: gray;
+}
