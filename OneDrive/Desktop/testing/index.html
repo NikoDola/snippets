@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation and Camera Example</title>
+    <style>
+        #video {
+            width: 100%; /* Full width */
+            height: auto; /* Maintain aspect ratio */
+        }
+        #location {
+            margin: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="location">Loading location...</div>
+    <video id="video" autoplay></video>
+
+    <script>
+        // Function to handle geolocation and video capture
+        function init() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function(position) {
+                        const latitude = position.coords.latitude;
+                        const longitude = position.coords.longitude;
+                        document.getElementById('location').textContent = `Latitude: ${latitude}, Longitude: ${longitude}`;
+
+                        // Optional: Update location every few seconds
+                        // UpdateLocation(latitude, longitude);
+
+                    },
+                    function(error) {
+                        console.error(`Error occurred: ${error.message}`);
+                        document.getElementById('location').textContent = `Error: ${error.message}`;
+                    },
+                    {
+                        enableHighAccuracy: true, // Use GPS if available
+                        timeout: 5000,            // Maximum time to wait for location
+                        maximumAge: 0             // No cached location
+                    }
+                );
+            } else {
+                console.error("Geolocation is not supported by this browser.");
+                document.getElementById('location').textContent = "Geolocation is not supported by this browser.";
+            }
+
+            // Access the user's camera
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(stream => {
+                    const video = document.getElementById('video');
+                    video.srcObject = stream;
+                })
+                .catch(error => {
+                    console.error('Error accessing camera:', error);
+                });
+        }
+
+        // Call init function to start geolocation and camera access
+        init();
+    </script>
+</body>
+</html>
