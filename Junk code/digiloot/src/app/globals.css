@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+*{
+  box-sizing: border-box;
+}
+
+
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+main{
+  width: 55%;
+  margin: 0 auto;
+}
+
+input, textarea{
+  width: 100%;
+  border: solid 0.5px;
+  padding: 1rem;
+}
+
+button{
+  background-color: black;
+  color: white;
+  padding: 1rem;
+}
+
+.nm{
+  background-color: blue;
+}
