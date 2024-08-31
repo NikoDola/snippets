@@ -27,7 +27,7 @@ export default function Home() {
     <main>
       <form onSubmit={getFormData}>
         <input type="text" name="email" placeholder="Email" required />
-        <input  type={hidePass} name="password" placeholder="Password" required />
+        <input  type={''} name="password" placeholder="Password" required />
         <input type="text" name="confirmPassword" placeholder="Confirm Password" required />
         <button type="submit">Sign Up</button>
       </form>

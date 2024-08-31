@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useContext, createContext } from "react";
 import { 
+  signOut,
   sendPasswordResetEmail,
   updatePassword,
   createUserWithEmailAndPassword, 
@@ -47,8 +48,8 @@ export function WrapFunction({ children }) {
   
         // Set the document with the required data
         await setDoc(docRef, { 
-          user: result.user.email, 
-          email: result.user.uid 
+          user: result.user.uid, 
+          email: result.user.email
         });
   
         setUser(result.user);
@@ -119,6 +120,10 @@ export function WrapFunction({ children }) {
     }
   };
 
+  const logout = () =>{
+    signOut(auth)
+  }
+
   const resetPassword = async(email) => {
     sendPasswordResetEmail(auth, email)
   }
@@ -128,6 +133,7 @@ export function WrapFunction({ children }) {
       user, 
       signUpWithEmail, 
       error, 
+      logout,
       userVerify, 
       login, 
       changePassword, 
